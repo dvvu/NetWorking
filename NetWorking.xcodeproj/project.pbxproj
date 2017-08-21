@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA26776A1F46CE27002A9EB1 /* DownloaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2677691F46CE27002A9EB1 /* DownloaderObject.m */; };
+		EA26776D1F46D03A002A9EB1 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26776C1F46D03A002A9EB1 /* DownloadManager.m */; };
+		EA2677701F46DDE6002A9EB1 /* NetWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26776F1F46DDE6002A9EB1 /* NetWorkViewController.m */; };
 		EA2AC00A1F458A2E004CAF71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC0091F458A2E004CAF71 /* main.m */; };
 		EA2AC00D1F458A2E004CAF71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC00C1F458A2E004CAF71 /* AppDelegate.m */; };
 		EA2AC0101F458A2E004CAF71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC00F1F458A2E004CAF71 /* ViewController.m */; };
@@ -15,6 +18,8 @@
 		EA2AC0181F458A2E004CAF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2AC0161F458A2E004CAF71 /* LaunchScreen.storyboard */; };
 		EA2AC0231F458A2E004CAF71 /* NetWorkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC0221F458A2E004CAF71 /* NetWorkingTests.m */; };
 		EA2AC02E1F458A2E004CAF71 /* NetWorkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC02D1F458A2E004CAF71 /* NetWorkingUITests.m */; };
+		EA2AC03D1F45A012004CAF71 /* ProgressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC03C1F45A012004CAF71 /* ProgressTableViewCell.m */; };
+		EAE80F21AE6DCCA78BFDE1A2 /* Pods_NetWorking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04F4CD5162D87E8CBFC598D /* Pods_NetWorking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7966304135511E53292F8E21 /* Pods-NetWorking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorking.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetWorking/Pods-NetWorking.release.xcconfig"; sourceTree = "<group>"; };
+		D04F4CD5162D87E8CBFC598D /* Pods_NetWorking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetWorking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2677681F46CE27002A9EB1 /* DownloaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderObject.h; sourceTree = "<group>"; };
+		EA2677691F46CE27002A9EB1 /* DownloaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderObject.m; sourceTree = "<group>"; };
+		EA26776B1F46D03A002A9EB1 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		EA26776C1F46D03A002A9EB1 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		EA26776E1F46DDE6002A9EB1 /* NetWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkViewController.h; sourceTree = "<group>"; };
+		EA26776F1F46DDE6002A9EB1 /* NetWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkViewController.m; sourceTree = "<group>"; };
 		EA2AC0051F458A2E004CAF71 /* NetWorking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetWorking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2AC0091F458A2E004CAF71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA2AC00B1F458A2E004CAF71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +64,9 @@
 		EA2AC0291F458A2E004CAF71 /* NetWorkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetWorkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2AC02D1F458A2E004CAF71 /* NetWorkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkingUITests.m; sourceTree = "<group>"; };
 		EA2AC02F1F458A2E004CAF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2AC03B1F45A012004CAF71 /* ProgressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressTableViewCell.h; sourceTree = "<group>"; };
+		EA2AC03C1F45A012004CAF71 /* ProgressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressTableViewCell.m; sourceTree = "<group>"; };
+		FB9E83464DCF7AC772E8F5EE /* Pods-NetWorking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetWorking/Pods-NetWorking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE80F21AE6DCCA78BFDE1A2 /* Pods_NetWorking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +95,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D2264A458E4180FC450DEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E83464DCF7AC772E8F5EE /* Pods-NetWorking.debug.xcconfig */,
+				7966304135511E53292F8E21 /* Pods-NetWorking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF46408DD9E3CBC04D600720 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D04F4CD5162D87E8CBFC598D /* Pods_NetWorking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA2677671F46CDE2002A9EB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA2677681F46CE27002A9EB1 /* DownloaderObject.h */,
+				EA2677691F46CE27002A9EB1 /* DownloaderObject.m */,
+				EA26776B1F46D03A002A9EB1 /* DownloadManager.h */,
+				EA26776C1F46D03A002A9EB1 /* DownloadManager.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		EA2ABFFC1F458A2E004CAF71 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +130,8 @@
 				EA2AC0211F458A2E004CAF71 /* NetWorkingTests */,
 				EA2AC02C1F458A2E004CAF71 /* NetWorkingUITests */,
 				EA2AC0061F458A2E004CAF71 /* Products */,
+				52D2264A458E4180FC450DEE /* Pods */,
+				CF46408DD9E3CBC04D600720 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +148,15 @@
 		EA2AC0071F458A2E004CAF71 /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
+				EA2677671F46CDE2002A9EB1 /* Models */,
 				EA2AC00B1F458A2E004CAF71 /* AppDelegate.h */,
 				EA2AC00C1F458A2E004CAF71 /* AppDelegate.m */,
+				EA2AC03B1F45A012004CAF71 /* ProgressTableViewCell.h */,
+				EA2AC03C1F45A012004CAF71 /* ProgressTableViewCell.m */,
 				EA2AC00E1F458A2E004CAF71 /* ViewController.h */,
 				EA2AC00F1F458A2E004CAF71 /* ViewController.m */,
+				EA26776E1F46DDE6002A9EB1 /* NetWorkViewController.h */,
+				EA26776F1F46DDE6002A9EB1 /* NetWorkViewController.m */,
 				EA2AC0111F458A2E004CAF71 /* Main.storyboard */,
 				EA2AC0141F458A2E004CAF71 /* Assets.xcassets */,
 				EA2AC0161F458A2E004CAF71 /* LaunchScreen.storyboard */,
@@ -147,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA2AC0321F458A2E004CAF71 /* Build configuration list for PBXNativeTarget "NetWorking" */;
 			buildPhases = (
+				2A5E32EA231B0FB56A9C90B3 /* [CP] Check Pods Manifest.lock */,
 				EA2AC0011F458A2E004CAF71 /* Sources */,
 				EA2AC0021F458A2E004CAF71 /* Frameworks */,
 				EA2AC0031F458A2E004CAF71 /* Resources */,
+				A13ABB6161C18B2431AD1EC7 /* [CP] Embed Pods Frameworks */,
+				7FB359F355F6F6B326AA3C83 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +262,13 @@
 				TargetAttributes = {
 					EA2AC0041F458A2E004CAF71 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = X2HJQ2687F;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					EA2AC01D1F458A2E004CAF71 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -268,6 +329,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A5E32EA231B0FB56A9C90B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7FB359F355F6F6B326AA3C83 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetWorking/Pods-NetWorking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A13ABB6161C18B2431AD1EC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetWorking/Pods-NetWorking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA2AC0011F458A2E004CAF71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,7 +384,11 @@
 			files = (
 				EA2AC0101F458A2E004CAF71 /* ViewController.m in Sources */,
 				EA2AC00D1F458A2E004CAF71 /* AppDelegate.m in Sources */,
+				EA2AC03D1F45A012004CAF71 /* ProgressTableViewCell.m in Sources */,
+				EA2677701F46DDE6002A9EB1 /* NetWorkViewController.m in Sources */,
 				EA2AC00A1F458A2E004CAF71 /* main.m in Sources */,
+				EA26776A1F46CE27002A9EB1 /* DownloaderObject.m in Sources */,
+				EA26776D1F46D03A002A9EB1 /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +527,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,8 +537,10 @@
 		};
 		EA2AC0331F458A2E004CAF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB9E83464DCF7AC772E8F5EE /* Pods-NetWorking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X2HJQ2687F;
 				INFOPLIST_FILE = NetWorking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VNG.NetWorking;
@@ -435,8 +550,10 @@
 		};
 		EA2AC0341F458A2E004CAF71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7966304135511E53292F8E21 /* Pods-NetWorking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X2HJQ2687F;
 				INFOPLIST_FILE = NetWorking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VNG.NetWorking;
@@ -509,6 +626,7 @@
 				EA2AC0341F458A2E004CAF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA2AC0351F458A2E004CAF71 /* Build configuration list for PBXNativeTarget "NetWorkingTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +635,7 @@
 				EA2AC0371F458A2E004CAF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA2AC0381F458A2E004CAF71 /* Build configuration list for PBXNativeTarget "NetWorkingUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +644,7 @@
 				EA2AC03A1F458A2E004CAF71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

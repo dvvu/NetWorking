@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1dZ-yS-z4x">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--NetWorking-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +23,128 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="NetWorking" id="HVd-vX-Xe8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="650" y="113"/>
+        </scene>
+        <!--Net Work View Controller-->
+        <scene sceneID="x53-3C-lcx">
+            <objects>
+                <viewController id="5vS-Uh-3J8" customClass="NetWorkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I13-Kw-QuD"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXE-4b-OO3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7dv-RP-aO1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1JC-Cn-orl">
+                                <rect key="frame" x="16" y="299" width="343" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jk-rQ-Wja">
+                                <rect key="frame" x="16" y="270" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvJ-bd-h63">
+                                <rect key="frame" x="135" y="309" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownload:" destination="5vS-Uh-3J8" eventType="touchUpInside" id="yVa-O8-W4l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M02-ry-iEC">
+                                <rect key="frame" x="149" y="385" width="77" height="30"/>
+                                <state key="normal" title="Delete files">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteFiles:" destination="5vS-Uh-3J8" eventType="touchUpInside" id="8gC-Ax-VU6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKE-qe-55b">
+                                <rect key="frame" x="128" y="347" width="120" height="30"/>
+                                <state key="normal" title="Cancel Download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelDownload:" destination="5vS-Uh-3J8" eventType="touchUpInside" id="NiH-wB-LKB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mZ-C3-n39">
+                                <rect key="frame" x="136" y="423" width="103" height="30"/>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopDownload:" destination="5vS-Uh-3J8" eventType="touchUpInside" id="5Mq-ja-0Qb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-uB-m1c">
+                                <rect key="frame" x="124" y="461" width="128" height="30"/>
+                                <state key="normal" title="Resume Download"/>
+                                <connections>
+                                    <action selector="resumeDownload:" destination="5vS-Uh-3J8" eventType="touchUpInside" id="SSh-Jb-fVH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tKE-qe-55b" firstAttribute="top" secondItem="LvJ-bd-h63" secondAttribute="bottom" constant="8" symbolic="YES" id="0L2-ve-zQi"/>
+                            <constraint firstItem="8Jk-rQ-Wja" firstAttribute="leading" secondItem="7dv-RP-aO1" secondAttribute="leadingMargin" id="1hk-G0-WPn"/>
+                            <constraint firstItem="zs1-uB-m1c" firstAttribute="centerX" secondItem="8mZ-C3-n39" secondAttribute="centerX" id="38Z-G9-ct4"/>
+                            <constraint firstItem="M02-ry-iEC" firstAttribute="top" secondItem="tKE-qe-55b" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ll-Ph-YJD"/>
+                            <constraint firstItem="8Jk-rQ-Wja" firstAttribute="trailing" secondItem="7dv-RP-aO1" secondAttribute="trailingMargin" id="HIT-pn-CCC"/>
+                            <constraint firstItem="zs1-uB-m1c" firstAttribute="top" secondItem="8mZ-C3-n39" secondAttribute="bottom" constant="8" id="Sum-5y-fBB"/>
+                            <constraint firstItem="8mZ-C3-n39" firstAttribute="centerX" secondItem="M02-ry-iEC" secondAttribute="centerX" id="TPa-05-EAN"/>
+                            <constraint firstItem="M02-ry-iEC" firstAttribute="centerX" secondItem="tKE-qe-55b" secondAttribute="centerX" id="VOB-f4-Jky"/>
+                            <constraint firstItem="8mZ-C3-n39" firstAttribute="top" secondItem="M02-ry-iEC" secondAttribute="bottom" constant="8" id="VyA-UR-vld"/>
+                            <constraint firstItem="LvJ-bd-h63" firstAttribute="top" secondItem="1JC-Cn-orl" secondAttribute="bottom" constant="8" symbolic="YES" id="WdA-Qk-Ifb"/>
+                            <constraint firstItem="LvJ-bd-h63" firstAttribute="centerX" secondItem="tKE-qe-55b" secondAttribute="centerX" id="Yo1-Bo-b7s"/>
+                            <constraint firstItem="8Jk-rQ-Wja" firstAttribute="top" secondItem="I13-Kw-QuD" secondAttribute="bottom" constant="250" id="aiN-1g-TSr"/>
+                            <constraint firstItem="8Jk-rQ-Wja" firstAttribute="leading" secondItem="1JC-Cn-orl" secondAttribute="leading" id="asI-g3-KBl"/>
+                            <constraint firstItem="8Jk-rQ-Wja" firstAttribute="trailing" secondItem="1JC-Cn-orl" secondAttribute="trailing" id="bFX-Yr-odj"/>
+                            <constraint firstItem="LvJ-bd-h63" firstAttribute="centerX" secondItem="1JC-Cn-orl" secondAttribute="centerX" id="pl0-UK-4c7"/>
+                            <constraint firstItem="1JC-Cn-orl" firstAttribute="top" secondItem="8Jk-rQ-Wja" secondAttribute="bottom" constant="8" symbolic="YES" id="udo-TS-n4y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="tKE-qe-55b" id="vWf-Mu-nzm"/>
+                        <outlet property="deleteButton" destination="M02-ry-iEC" id="nt1-7i-L9e"/>
+                        <outlet property="mainLabel" destination="8Jk-rQ-Wja" id="GOY-fc-SCC"/>
+                        <outlet property="progressView" destination="1JC-Cn-orl" id="ciL-1E-6bl"/>
+                        <outlet property="resumeButton" destination="zs1-uB-m1c" id="1dG-j3-uFk"/>
+                        <outlet property="startButton" destination="LvJ-bd-h63" id="DUw-I6-lSu"/>
+                        <outlet property="stopButton" destination="8mZ-C3-n39" id="md9-13-Pqd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dX-IF-XLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="-609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Kp-xc-gz7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1dZ-yS-z4x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytV-FV-ILn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4gc-Ol-d4Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fP8-7q-N5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="113"/>
         </scene>
     </scenes>
 </document>
