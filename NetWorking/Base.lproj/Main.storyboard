@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1dZ-yS-z4x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fZb-cp-nRI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,7 +126,379 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dX-IF-XLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183" y="-609"/>
+            <point key="canvasLocation" x="-113" y="-618"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="Api-1V-Tck">
+            <objects>
+                <viewController id="fZb-cp-nRI" customClass="testViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaA-j3-GUd"/>
+                        <viewControllerLayoutGuide type="bottom" id="M20-me-qPd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hfU-KT-Z7P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OOk-Xi-tGW">
+                                <rect key="frame" x="16" y="73" width="343" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqB-78-HU5">
+                                <rect key="frame" x="16" y="97" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start1:" destination="fZb-cp-nRI" eventType="touchUpInside" id="8iu-Ng-GZ5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OI-Vr-Q2a">
+                                <rect key="frame" x="129" y="97" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="x7w-o1-ECc"/>
+                                </constraints>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop1:" destination="fZb-cp-nRI" eventType="touchUpInside" id="LiI-H5-bcJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fc-ke-H3C">
+                                <rect key="frame" x="243" y="97" width="116" height="30"/>
+                                <state key="normal" title="cancel download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel1:" destination="fZb-cp-nRI" eventType="touchUpInside" id="voN-oO-lfo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzF-bW-rFD">
+                                <rect key="frame" x="64" y="541" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAll:" destination="fZb-cp-nRI" eventType="touchUpInside" id="x0f-5J-gRF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-ND-waH">
+                                <rect key="frame" x="206" y="541" width="103" height="30"/>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAll:" destination="fZb-cp-nRI" eventType="touchUpInside" id="55k-pw-hqC"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T5J-hg-dUQ">
+                                <rect key="frame" x="16" y="141" width="343" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ch-gv-Uyr">
+                                <rect key="frame" x="16" y="165" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start2:" destination="fZb-cp-nRI" eventType="touchUpInside" id="Kou-xc-Dfj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNx-3z-WWN">
+                                <rect key="frame" x="129" y="165" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="ea3-0O-vPl"/>
+                                </constraints>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop2:" destination="fZb-cp-nRI" eventType="touchUpInside" id="FSk-Km-TBi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-BG-U3d">
+                                <rect key="frame" x="243" y="165" width="116" height="30"/>
+                                <state key="normal" title="cancel download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel2:" destination="fZb-cp-nRI" eventType="touchUpInside" id="QWa-MC-xVz"/>
+                                    <action selector="cancel3:" destination="fZb-cp-nRI" eventType="touchUpInside" id="knd-Nk-4nE"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3E6-Bu-Ppc">
+                                <rect key="frame" x="16" y="211" width="343" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-Q0-ih7">
+                                <rect key="frame" x="16" y="235" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start3:" destination="fZb-cp-nRI" eventType="touchUpInside" id="9lS-VH-XUy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AN-EA-jZJ">
+                                <rect key="frame" x="129" y="235" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="2fS-C2-tbk"/>
+                                </constraints>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop3:" destination="fZb-cp-nRI" eventType="touchUpInside" id="eSG-JI-RET"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypB-lA-sj7">
+                                <rect key="frame" x="243" y="235" width="116" height="30"/>
+                                <state key="normal" title="cancel download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel2:" destination="fZb-cp-nRI" eventType="touchUpInside" id="sWZ-PH-7ha"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YCK-Gn-zau">
+                                <rect key="frame" x="16" y="273" width="343" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9F-54-H7y">
+                                <rect key="frame" x="16" y="297" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start4:" destination="fZb-cp-nRI" eventType="touchUpInside" id="SmG-mm-Pne"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-l6-DOK">
+                                <rect key="frame" x="129" y="297" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="zqV-Qy-dfF"/>
+                                </constraints>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop4:" destination="fZb-cp-nRI" eventType="touchUpInside" id="hmB-PT-UWD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6h-vU-OvZ">
+                                <rect key="frame" x="243" y="297" width="116" height="30"/>
+                                <state key="normal" title="cancel download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel4:" destination="fZb-cp-nRI" eventType="touchUpInside" id="Dil-cf-Z9O"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P2l-SF-0My">
+                                <rect key="frame" x="16" y="349" width="343" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPF-8u-MeF">
+                                <rect key="frame" x="16" y="373" width="105" height="30"/>
+                                <state key="normal" title="Start download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="start5:" destination="fZb-cp-nRI" eventType="touchUpInside" id="NJw-6y-UH0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-C4-ucX">
+                                <rect key="frame" x="129" y="373" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="hQp-zA-4x0"/>
+                                </constraints>
+                                <state key="normal" title="Stop download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop5:" destination="fZb-cp-nRI" eventType="touchUpInside" id="juO-NE-eUG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANT-JN-WS4">
+                                <rect key="frame" x="243" y="373" width="116" height="30"/>
+                                <state key="normal" title="cancel download">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel5:" destination="fZb-cp-nRI" eventType="touchUpInside" id="57V-9p-n0a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a6h-vU-OvZ" firstAttribute="leading" secondItem="Sb6-l6-DOK" secondAttribute="trailing" constant="8" id="0lk-fp-3ta"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="top" secondItem="aT5-BG-U3d" secondAttribute="bottom" constant="16" id="0rB-Md-Hbj"/>
+                            <constraint firstItem="M20-me-qPd" firstAttribute="top" secondItem="hzF-bW-rFD" secondAttribute="bottom" constant="96" id="1Fz-FM-GuN"/>
+                            <constraint firstItem="7AN-EA-jZJ" firstAttribute="leading" secondItem="KnF-Q0-ih7" secondAttribute="trailing" constant="8" id="3w3-2Q-FKq"/>
+                            <constraint firstItem="T9F-54-H7y" firstAttribute="top" secondItem="YCK-Gn-zau" secondAttribute="bottom" constant="22" id="5Lk-Jl-top"/>
+                            <constraint firstItem="PNx-3z-WWN" firstAttribute="leading" secondItem="5ch-gv-Uyr" secondAttribute="trailing" constant="8" id="5rx-z9-oBO"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="trailing" secondItem="YCK-Gn-zau" secondAttribute="trailing" id="8aa-k2-wKY"/>
+                            <constraint firstItem="T9F-54-H7y" firstAttribute="top" secondItem="YCK-Gn-zau" secondAttribute="bottom" constant="22" id="97F-f6-3Mc"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="leading" secondItem="5ch-gv-Uyr" secondAttribute="leading" id="9fe-sP-dZW"/>
+                            <constraint firstItem="a6h-vU-OvZ" firstAttribute="top" secondItem="YCK-Gn-zau" secondAttribute="bottom" constant="22" id="Aip-bO-yYy"/>
+                            <constraint firstItem="ANT-JN-WS4" firstAttribute="top" secondItem="P2l-SF-0My" secondAttribute="bottom" constant="22" id="B0Y-Eo-eeA"/>
+                            <constraint firstItem="aT5-BG-U3d" firstAttribute="leading" secondItem="PNx-3z-WWN" secondAttribute="trailing" constant="8" id="B3Y-IZ-dHX"/>
+                            <constraint firstItem="P2l-SF-0My" firstAttribute="top" secondItem="a6h-vU-OvZ" secondAttribute="bottom" constant="22" id="BPo-MZ-6qc"/>
+                            <constraint firstItem="NqB-78-HU5" firstAttribute="top" secondItem="OOk-Xi-tGW" secondAttribute="bottom" constant="22" id="Bjs-De-E5r"/>
+                            <constraint firstItem="T5J-hg-dUQ" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="EmE-D4-Kak"/>
+                            <constraint firstItem="ypB-lA-sj7" firstAttribute="leading" secondItem="7AN-EA-jZJ" secondAttribute="trailing" constant="8" id="H42-Uu-8wS"/>
+                            <constraint firstItem="M20-me-qPd" firstAttribute="top" secondItem="Eod-ND-waH" secondAttribute="bottom" constant="96" id="HOM-dj-vHc"/>
+                            <constraint firstItem="OOk-Xi-tGW" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="I19-GU-beb"/>
+                            <constraint firstItem="OOk-Xi-tGW" firstAttribute="top" secondItem="qaA-j3-GUd" secondAttribute="bottom" constant="53" id="MS4-WY-yTx"/>
+                            <constraint firstItem="4Fc-ke-H3C" firstAttribute="leading" secondItem="1OI-Vr-Q2a" secondAttribute="trailing" constant="8" id="OkY-jj-xoV"/>
+                            <constraint firstItem="OOk-Xi-tGW" firstAttribute="trailing" secondItem="hfU-KT-Z7P" secondAttribute="trailingMargin" id="OmL-A0-xIv"/>
+                            <constraint firstItem="7AN-EA-jZJ" firstAttribute="top" secondItem="3E6-Bu-Ppc" secondAttribute="bottom" constant="22" id="PZQ-e9-9Yk"/>
+                            <constraint firstItem="ypB-lA-sj7" firstAttribute="top" secondItem="3E6-Bu-Ppc" secondAttribute="bottom" constant="22" id="R6y-Rz-WNb"/>
+                            <constraint firstItem="pPF-8u-MeF" firstAttribute="top" secondItem="P2l-SF-0My" secondAttribute="bottom" constant="22" id="RSp-tY-bi1"/>
+                            <constraint firstItem="Sb6-l6-DOK" firstAttribute="leading" secondItem="T9F-54-H7y" secondAttribute="trailing" constant="8" id="Sr2-dy-cdI"/>
+                            <constraint firstItem="5ch-gv-Uyr" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="VIT-yO-TAo"/>
+                            <constraint firstItem="hzF-bW-rFD" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" constant="48" id="VJs-Yg-JUE"/>
+                            <constraint firstItem="1OI-Vr-Q2a" firstAttribute="top" secondItem="OOk-Xi-tGW" secondAttribute="bottom" constant="22" id="W8u-AA-lBJ"/>
+                            <constraint firstItem="4Fc-ke-H3C" firstAttribute="trailing" secondItem="hfU-KT-Z7P" secondAttribute="trailingMargin" id="Wze-6C-fe0"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="trailing" secondItem="P2l-SF-0My" secondAttribute="trailing" id="X8E-Sn-D56"/>
+                            <constraint firstItem="KnF-Q0-ih7" firstAttribute="top" secondItem="3E6-Bu-Ppc" secondAttribute="bottom" constant="22" id="b8z-ZF-iq4"/>
+                            <constraint firstItem="ANT-JN-WS4" firstAttribute="leading" secondItem="3UJ-C4-ucX" secondAttribute="trailing" constant="8" id="c9t-eA-UKB"/>
+                            <constraint firstItem="T5J-hg-dUQ" firstAttribute="top" secondItem="4Fc-ke-H3C" secondAttribute="bottom" constant="14" id="cwS-a9-UTG"/>
+                            <constraint firstItem="PNx-3z-WWN" firstAttribute="top" secondItem="T5J-hg-dUQ" secondAttribute="bottom" constant="22" id="ey1-2A-vff"/>
+                            <constraint firstItem="4Fc-ke-H3C" firstAttribute="top" secondItem="OOk-Xi-tGW" secondAttribute="bottom" constant="22" id="fAE-jh-Q9t"/>
+                            <constraint firstItem="3UJ-C4-ucX" firstAttribute="leading" secondItem="pPF-8u-MeF" secondAttribute="trailing" constant="8" id="fhc-je-LIl"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="leading" secondItem="P2l-SF-0My" secondAttribute="leading" id="fte-5d-xkg"/>
+                            <constraint firstItem="YCK-Gn-zau" firstAttribute="top" secondItem="ypB-lA-sj7" secondAttribute="bottom" constant="8" id="gUE-6g-D6b"/>
+                            <constraint firstItem="Sb6-l6-DOK" firstAttribute="top" secondItem="YCK-Gn-zau" secondAttribute="bottom" constant="22" id="gs8-Wd-iLJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eod-ND-waH" secondAttribute="trailing" constant="50" id="k6k-pF-v1H"/>
+                            <constraint firstItem="3UJ-C4-ucX" firstAttribute="top" secondItem="P2l-SF-0My" secondAttribute="bottom" constant="22" id="oJE-ra-pRC"/>
+                            <constraint firstItem="1OI-Vr-Q2a" firstAttribute="leading" secondItem="NqB-78-HU5" secondAttribute="trailing" constant="8" id="ppL-cJ-oIC"/>
+                            <constraint firstItem="KnF-Q0-ih7" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="rOG-gN-8ny"/>
+                            <constraint firstItem="pPF-8u-MeF" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="rSz-EZ-ETV"/>
+                            <constraint firstItem="T9F-54-H7y" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="rUM-R3-35k"/>
+                            <constraint firstItem="5ch-gv-Uyr" firstAttribute="top" secondItem="T5J-hg-dUQ" secondAttribute="bottom" constant="22" id="rcH-Vv-dgn"/>
+                            <constraint firstItem="T5J-hg-dUQ" firstAttribute="trailing" secondItem="hfU-KT-Z7P" secondAttribute="trailingMargin" id="rfL-6e-fAh"/>
+                            <constraint firstItem="NqB-78-HU5" firstAttribute="leading" secondItem="hfU-KT-Z7P" secondAttribute="leadingMargin" id="tfR-mt-Bu5"/>
+                            <constraint firstItem="aT5-BG-U3d" firstAttribute="top" secondItem="T5J-hg-dUQ" secondAttribute="bottom" constant="22" id="uP5-6b-Ola"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="trailing" secondItem="aT5-BG-U3d" secondAttribute="trailing" id="y1j-i7-6Op"/>
+                            <constraint firstItem="3E6-Bu-Ppc" firstAttribute="leading" secondItem="YCK-Gn-zau" secondAttribute="leading" id="zcy-Wk-KGn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="v1" destination="OOk-Xi-tGW" id="2qE-xz-SNe"/>
+                        <outlet property="v2" destination="T5J-hg-dUQ" id="NFT-w9-OiY"/>
+                        <outlet property="v3" destination="3E6-Bu-Ppc" id="hqw-0o-4cN"/>
+                        <outlet property="v4" destination="YCK-Gn-zau" id="ThG-tQ-W2e"/>
+                        <outlet property="v5" destination="P2l-SF-0My" id="gGp-Hd-0iR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr4-fc-Ivo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="-627"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vLs-vp-rPE">
+            <objects>
+                <viewController id="4OJ-4K-mcS" customClass="TETViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Sz-RZ-M10"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tdt-Q1-M5B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mk2-lH-z4o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lxm-7K-5c1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="489"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="489" id="d0d-WF-i2l"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Uak-Fq-PPG">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uak-Fq-PPG" id="bXt-ec-re9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0M-kA-f8R">
+                                                    <rect key="frame" x="8" y="11" width="251" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HK1-Ip-TKa">
+                                                    <rect key="frame" x="329" y="6" width="31" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="stop"/>
+                                                    <connections>
+                                                        <action selector="stopDownloading:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="67a-71-bUU"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOb-2l-OLh">
+                                                    <rect key="frame" x="274" y="7" width="32" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="start"/>
+                                                    <connections>
+                                                        <action selector="startOrPauseDownloadingSingleFile:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="bax-1g-T54"/>
+                                                    </connections>
+                                                </button>
+                                                <progressView opaque="NO" tag="40" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KZa-s5-KZ0">
+                                                    <rect key="frame" x="8" y="35" width="359" height="2"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </progressView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5rl-Uj-PLw">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5rl-Uj-PLw" id="ayq-al-uQz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="erG-Vb-qwN">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erG-Vb-qwN" id="NXT-EV-2TN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLl-i5-lQh">
+                                <rect key="frame" x="161" y="561" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start all"/>
+                                <connections>
+                                    <action selector="startAllDownloads:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="5ng-R7-9Ke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvU-xH-XEE">
+                                <rect key="frame" x="162" y="629" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop all"/>
+                                <connections>
+                                    <action selector="stopAllDownloads:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="5fw-h4-qy2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lxm-7K-5c1" firstAttribute="leading" secondItem="Mk2-lH-z4o" secondAttribute="leading" id="1t9-D8-pfR"/>
+                            <constraint firstItem="Lxm-7K-5c1" firstAttribute="top" secondItem="1Sz-RZ-M10" secondAttribute="bottom" id="IrA-c7-SEl"/>
+                            <constraint firstAttribute="trailing" secondItem="Lxm-7K-5c1" secondAttribute="trailing" id="jnu-gF-N8P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DqZ-wz-Rvr"/>
+                    <connections>
+                        <outlet property="tblFiles" destination="Lxm-7K-5c1" id="Rlg-0O-AHU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcK-n1-Pkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863.1999999999998" y="-666.11694152923542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Kp-xc-gz7">
@@ -145,6 +517,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP8-7q-N5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-11" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wxg-Oo-Ahz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H0u-57-enF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeS-uE-qo3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4OJ-4K-mcS" kind="relationship" relationship="rootViewController" id="hUF-eC-0OF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kR7-s6-DP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="-666.11694152923542"/>
         </scene>
     </scenes>
 </document>

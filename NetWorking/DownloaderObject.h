@@ -23,6 +23,7 @@ typedef void(^DownloaderCompletionBlock)(BOOL completed);
 @property (copy, nonatomic) NSString* directoryName;
 @property (copy, nonatomic) NSString* fileName;
 @property (copy, nonatomic) NSDate* startDate;
+@property (copy, nonatomic) NSString* url;
 @property (nonatomic) NSData* resumeData;
 
 #pragma mark - initWithDownloaderTask

@@ -30,15 +30,6 @@
 #pragma mark - cancelDownloadForUrl
 - (void)cancelDownloadForUrl:(NSString *)fileIdentifier;
 
-#pragma mark - cleanDirectoryNamed
-- (void)cleanDirectoryNamed:(NSString *)directory;
-
-#pragma mark - isFileDownloadingForUrl
-- (BOOL)isFileDownloadingForUrl:(NSString *)fileIdentifier;
-
-#pragma mark - localPathForFile
-- (NSString *)localPathForFile:(NSString *)fileIdentifier;
-
 #pragma mark - fileExistsForUrl
 - (BOOL)fileExistsForUrl:(NSString *)urlString;
 

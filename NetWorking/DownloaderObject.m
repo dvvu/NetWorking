@@ -10,6 +10,8 @@
 
 @implementation DownloaderObject
 
+#pragma mark - initWithDownloaderTask
+
 - (instancetype)initWithDownloaderTask:(NSURLSessionDownloadTask *)downloadTask progressBlock:(DownloaderProgressBlock)progressBlock remainingTime:(DownloaderRemainingTimeBlock)remainingTimeBlock completionBlock:(DownloaderCompletionBlock)completionBlock {
     
     self = [super init];
