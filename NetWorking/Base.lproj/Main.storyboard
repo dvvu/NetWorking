@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fZb-cp-nRI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1dZ-yS-z4x">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NetWorking-->
+        <!--Download NetWorking-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -21,13 +21,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUF-2I-cae">
+                                <rect key="frame" x="-4" y="627" width="127.5" height="40"/>
+                                <color key="backgroundColor" red="0.1106283814" green="0.221523419" blue="0.91962563990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vbg-NQ-aeR"/>
+                                </constraints>
+                                <state key="normal" title="Resume all">
+                                    <color key="titleColor" red="1" green="0.37225573789999999" blue="0.3208202443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="resumeAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0sd-zh-hlA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufl-ld-EJu">
+                                <rect key="frame" x="123.5" y="627" width="128" height="40"/>
+                                <color key="backgroundColor" red="0.1106283814" green="0.221523419" blue="0.91962563990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Pause all">
+                                    <color key="titleColor" red="1" green="0.37225573789999999" blue="0.3208202443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="pasueAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDi-d3-AaR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR0-R4-MaB">
+                                <rect key="frame" x="251.5" y="627" width="127.5" height="40"/>
+                                <color key="backgroundColor" red="0.1106283814" green="0.221523419" blue="0.91962563990000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Clear Caches">
+                                    <color key="titleColor" red="1" green="0.37225573789999999" blue="0.3208202443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCaches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUE-Jm-scC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DUF-2I-cae" firstAttribute="width" secondItem="ufl-ld-EJu" secondAttribute="width" id="4xI-b3-VeS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ufl-ld-EJu" secondAttribute="bottom" id="6TK-H3-8dM"/>
+                            <constraint firstItem="DUF-2I-cae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Aka-4f-ZKd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DUF-2I-cae" secondAttribute="bottom" id="FYC-Ds-s1V"/>
+                            <constraint firstItem="GR0-R4-MaB" firstAttribute="height" secondItem="ufl-ld-EJu" secondAttribute="height" id="Udf-NL-DDW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GR0-R4-MaB" secondAttribute="bottom" id="Wpi-cI-OmD"/>
+                            <constraint firstItem="GR0-R4-MaB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="eRK-IT-5ja"/>
+                            <constraint firstItem="ufl-ld-EJu" firstAttribute="height" secondItem="DUF-2I-cae" secondAttribute="height" id="gXa-1U-jGl"/>
+                            <constraint firstItem="ufl-ld-EJu" firstAttribute="width" secondItem="GR0-R4-MaB" secondAttribute="width" id="jES-tq-BhT"/>
+                            <constraint firstItem="GR0-R4-MaB" firstAttribute="leading" secondItem="ufl-ld-EJu" secondAttribute="trailing" id="xWt-j3-JiT"/>
+                            <constraint firstItem="ufl-ld-EJu" firstAttribute="leading" secondItem="DUF-2I-cae" secondAttribute="trailing" id="yPP-ZP-VEX"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NetWorking" id="HVd-vX-Xe8"/>
+                    <navigationItem key="navigationItem" title="Download NetWorking" id="HVd-vX-Xe8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="113"/>
+            <point key="canvasLocation" x="546" y="50"/>
         </scene>
         <!--Net Work View Controller-->
         <scene sceneID="x53-3C-lcx">
@@ -395,7 +443,7 @@
         <!--View Controller-->
         <scene sceneID="vLs-vp-rPE">
             <objects>
-                <viewController id="4OJ-4K-mcS" customClass="TETViewController" sceneMemberID="viewController">
+                <viewController id="4OJ-4K-mcS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Sz-RZ-M10"/>
                         <viewControllerLayoutGuide type="bottom" id="Tdt-Q1-M5B"/>
@@ -429,17 +477,11 @@
                                                     <rect key="frame" x="329" y="6" width="31" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="stop"/>
-                                                    <connections>
-                                                        <action selector="stopDownloading:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="67a-71-bUU"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOb-2l-OLh">
                                                     <rect key="frame" x="274" y="7" width="32" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="start"/>
-                                                    <connections>
-                                                        <action selector="startOrPauseDownloadingSingleFile:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="bax-1g-T54"/>
-                                                    </connections>
                                                 </button>
                                                 <progressView opaque="NO" tag="40" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KZa-s5-KZ0">
                                                     <rect key="frame" x="8" y="35" width="359" height="2"/>
@@ -471,17 +513,11 @@
                                 <rect key="frame" x="161" y="561" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="start all"/>
-                                <connections>
-                                    <action selector="startAllDownloads:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="5ng-R7-9Ke"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvU-xH-XEE">
                                 <rect key="frame" x="162" y="629" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="stop all"/>
-                                <connections>
-                                    <action selector="stopAllDownloads:" destination="4OJ-4K-mcS" eventType="touchUpInside" id="5fw-h4-qy2"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -492,9 +528,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DqZ-wz-Rvr"/>
-                    <connections>
-                        <outlet property="tblFiles" destination="Lxm-7K-5c1" id="Rlg-0O-AHU"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EcK-n1-Pkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,7 +549,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fP8-7q-N5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11" y="113"/>
+            <point key="canvasLocation" x="-114" y="50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wxg-Oo-Ahz">

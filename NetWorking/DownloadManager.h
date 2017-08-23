@@ -16,19 +16,19 @@
 @property (nonatomic) void(^backgroundTransferCompletionHandler)();
 
 #pragma mark - Download with estimated time
-- (void)downloadFileForURL:(NSString *)url
-                  withName:(NSString *)fileName
-          inDirectoryNamed:(NSString *)directory
-             progressBlock:(void(^)(CGFloat progress))progressBlock
-             remainingTime:(void(^)(NSUInteger seconds))remainingTimeBlock
-           completionBlock:(void(^)(BOOL completed))completionBlock
-      enableBackgroundMode:(BOOL)backgroundMode;
+- (void)downloadFileForURL:(NSString *)url withName:(NSString *)fileName inDirectoryNamed:(NSString *)directory progressBlock:(void(^)(CGFloat progress))progressBlock remainingTime:(void(^)(NSUInteger seconds))remainingTimeBlock completionBlock:(void(^)(BOOL completed))completionBlock;
 
 #pragma mark - cancelAllDownloads
 - (void)cancelAllDownloads;
 
 #pragma mark - cancelDownloadForUrl
 - (void)cancelDownloadForUrl:(NSString *)fileIdentifier;
+
+#pragma mark - stopDownLoadForUrl...
+- (void)pauseDownLoadForUrl:(NSString *)fileIdentifier;
+
+#pragma mark - resumeDownLoadForUrl...
+- (void)resumeDownLoadForUrl:(NSString *)fileIdentifier;
 
 #pragma mark - fileExistsForUrl
 - (BOOL)fileExistsForUrl:(NSString *)urlString;
@@ -42,13 +42,10 @@
 #pragma mark - fileExistsWithName
 - (BOOL)deleteFileWithName:(NSString *)fileName;
 
+#pragma mark - fileExistsWithName
+- (NSString *)localPathForFile:(NSString *)fileIdentifier;
+
 #pragma mark - currentDownloads
 - (NSArray *)currentDownloads;
-
-#pragma mark - stopDownLoadForUrl...
-- (void)stopDownLoadForUrl:(NSString *)fileIdentifier;
-
-#pragma mark - resumeDownLoadForUrl...
-- (void)resumeDownLoadForUrl:(NSString *)fileIdentifier;
 
 @end

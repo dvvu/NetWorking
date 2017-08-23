@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DownloadManager.h"
 
 @interface AppDelegate ()
 
@@ -14,12 +15,10 @@
 
 @implementation AppDelegate
 
-
-
--(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler{
+-(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
     
-    self.backgroundTransferCompletionHandler = completionHandler;
-    
+    _backgroundTransferCompletionHandler = completionHandler;
+    [DownloadManager sharedManager].backgroundTransferCompletionHandler = completionHandler;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -71,7 +71,7 @@
         _deleteButton.enabled = YES;
         _cancelButton.enabled = NO;
         _startButton.enabled = NO;
-    } enableBackgroundMode:YES];
+    }];
     
     _cancelButton.enabled = YES;
     _startButton.enabled = NO;
@@ -97,9 +97,9 @@
     _cancelButton.enabled = NO;
 }
 
-- (IBAction)stopDownload:(id)sender {
+- (IBAction)pauseDownload:(id)sender {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:FILE_URL];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:FILE_URL];
 }
 
 - (IBAction)resumeDownload:(id)sender {

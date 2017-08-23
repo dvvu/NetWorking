@@ -9,23 +9,28 @@
 #import "TabbleCellDelegate.h"
 #import <UIKit/UIKit.h>
 
-#pragma mark - DownloadButtonType
+#pragma mark - DownloadButtonStype
 typedef enum {
     
-    StartStype = 0,
+    DownloadStype = 0,
     PauseStype = 1,
     ResumeStype = 2,
-} DownloadButtonType;
+} DownloadButtonStype;
+
+#pragma mark - CancelButtonStype
+typedef enum {
+    
+    StopStype = 0,
+    CancelStype = 1,
+} CancelButtonStype;
 
 @interface ProgressTableViewCell : UITableViewCell
 
 @property (nonatomic) id<TabbleCellDelegate> delegate;
-@property (nonatomic) UILabel* taskLabel;
-@property (nonatomic) UILabel* infoLabel;
 @property (nonatomic) UIButton* downloadButton;
 @property (nonatomic) UIButton* cancelButton;
+@property (nonatomic) UILabel* taskLabel;
+@property (nonatomic) UILabel* infoLabel;
 @property (nonatomic) NSString* link;
-
-- (void)startDownload;
 
 @end

@@ -22,4 +22,7 @@
 #pragma mark - cancelDownload
 - (void)cancelDownload;
 
+#pragma mark - stopDownload
+- (void)stopDownload;
+
 @end

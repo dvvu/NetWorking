@@ -12,12 +12,16 @@
 #import "ViewController.h"
 #import "Masonry.h"
 
-#define FILE_URL @"http://ovh.net/files/10Mio.dat"
+#define FILE_URL  @"http://ovh.net/files/10Mio.dat"
 #define FILE_URL1 @"http://cdn.tutsplus.com/mobile/uploads/2013/12/sample.jpg"
+#define FILE_URL2 @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo17/hires/s72-55482.jpg"
+#define FILE_URL3 @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo10/hires/as10-34-5162.jpg"
+#define FILE_URL4 @"http://spaceflight.nasa.gov/gallery/images/apollo-soyuz/apollo-soyuz/hires/s75-33375.jpg"
+#define FILE_URL5 @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo17/hires/as17-134-20380.jpg"
+#define FILE_URL6 @"http://cdn.tutsplus.com/mobile/uploads/2013/12/sample.jpg"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource, TabbleCellDelegate>
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) ProgressTableViewCell* cell;
 @property (nonatomic) UITableView* tableView;
 @property (nonatomic) NSArray* links;
 
@@ -38,17 +42,13 @@
     
     [_tableView mas_makeConstraints:^(MASConstraintMaker* make) {
       
-        make.edges.equalTo(self.view);
+        make.top.equalTo(self.view).offset(65);
+        make.left.equalTo(self.view).offset(0);
+        make.bottom.equalTo(self.view).offset(-40);
+        make.right.equalTo(self.view).offset(0);
     }];
     
-//    _links = [NSArray arrayWithObjects:FILE_URL,FILE_URL1, nil];
-    
-    _links = @[@"http://spaceflight.nasa.gov/gallery/images/apollo/apollo17/hires/s72-55482.jpg",
-                            @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo10/hires/as10-34-5162.jpg",
-                            @"http://spaceflight.nasa.gov/gallery/images/apollo-soyuz/apollo-soyuz/hires/s75-33375.jpg",
-                            @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo17/hires/as17-134-20380.jpg",
-                            @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo17/hires/as17-140-21497.jpg",
-                            @"http://spaceflight.nasa.gov/gallery/images/apollo/apollo17/hires/as17-148-22727.jpg"];
+    _links = @[FILE_URL,FILE_URL1,FILE_URL2,FILE_URL3,FILE_URL4,FILE_URL5,FILE_URL6];
 }
 
 #pragma - tableview Delegate
@@ -70,6 +70,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ProgressTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
     if (cell == nil) {
         
         cell = [[ProgressTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
@@ -78,38 +79,44 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.taskLabel.text = [_links[indexPath.row] lastPathComponent];
     cell.link = _links[indexPath.row];
-    cell.delegate = self;
-    
-    
-    if ([[DownloadManager sharedManager] fileExistsForUrl:_links[indexPath.row]]) {
-        [cell startDownload];
-    }
     
     return cell;
 }
 
-#pragma mark - startDownload
+#pragma - startAll
 
-- (void)startDownload {
+- (IBAction)resumeAll:(id)sender {
     
+    NSArray* currentDownload = [[DownloadManager sharedManager] currentDownloads];
+    
+    for (int i = 0; i< currentDownload.count; i++) {
+        
+        [[DownloadManager sharedManager] resumeDownLoadForUrl:[currentDownload objectAtIndex:i]];
+    }
 }
 
-#pragma mark - pauseDownload
+#pragma - pasueAll
 
-- (void)pauseDownload {
+- (IBAction)pasueAll:(id)sender {
+   
+    NSArray* currentDownload = [[DownloadManager sharedManager] currentDownloads];
     
+    for (int i = 0; i< currentDownload.count; i++) {
+        
+        [[DownloadManager sharedManager] pauseDownLoadForUrl:[currentDownload objectAtIndex:i]];
+    }
 }
 
-#pragma mark - resumeDownload
+#pragma - clearCaches
 
-- (void)resumeDownload {
+- (IBAction)clearCaches:(id)sender {
     
-}
-
-#pragma mark - cancelDownload
-
-- (void)cancelDownload {
+    for (int i = 0; i < _links.count; i++) {
+        
+        [[DownloadManager sharedManager] deleteFileForUrl:_links[i]];
+    }
     
+    [_tableView reloadData];
 }
 
 @end

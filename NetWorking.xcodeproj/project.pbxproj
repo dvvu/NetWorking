@@ -20,8 +20,6 @@
 		EA2AC02E1F458A2E004CAF71 /* NetWorkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC02D1F458A2E004CAF71 /* NetWorkingUITests.m */; };
 		EA2AC03D1F45A012004CAF71 /* ProgressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2AC03C1F45A012004CAF71 /* ProgressTableViewCell.m */; };
 		EA7692421F4AE57B00F53247 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7692411F4AE57B00F53247 /* testViewController.m */; };
-		EA7692461F4AFB9D00F53247 /* TETViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7692451F4AFB9D00F53247 /* TETViewController.m */; };
-		EA7692491F4AFC1D00F53247 /* FileDownloadInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7692481F4AFC1D00F53247 /* FileDownloadInfo.m */; };
 		EAE80F21AE6DCCA78BFDE1A2 /* Pods_NetWorking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04F4CD5162D87E8CBFC598D /* Pods_NetWorking.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,10 +70,6 @@
 		EA76923F1F4A85D800F53247 /* TabbleCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabbleCellDelegate.h; sourceTree = "<group>"; };
 		EA7692401F4AE57B00F53247 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
 		EA7692411F4AE57B00F53247 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
-		EA7692441F4AFB9D00F53247 /* TETViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TETViewController.h; sourceTree = "<group>"; };
-		EA7692451F4AFB9D00F53247 /* TETViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TETViewController.m; sourceTree = "<group>"; };
-		EA7692471F4AFC1D00F53247 /* FileDownloadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadInfo.h; sourceTree = "<group>"; };
-		EA7692481F4AFC1D00F53247 /* FileDownloadInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadInfo.m; sourceTree = "<group>"; };
 		FB9E83464DCF7AC772E8F5EE /* Pods-NetWorking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetWorking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetWorking/Pods-NetWorking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,22 +152,18 @@
 		EA2AC0071F458A2E004CAF71 /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
-				EA7692431F4AFB8800F53247 /* New Group */,
+				EA7692431F4AFB8800F53247 /* test */,
 				EA76923E1F4A85AC00F53247 /* Delegate */,
 				EA2677671F46CDE2002A9EB1 /* Models */,
 				EA2AC03B1F45A012004CAF71 /* ProgressTableViewCell.h */,
 				EA2AC03C1F45A012004CAF71 /* ProgressTableViewCell.m */,
 				EA2AC00E1F458A2E004CAF71 /* ViewController.h */,
 				EA2AC00F1F458A2E004CAF71 /* ViewController.m */,
-				EA26776E1F46DDE6002A9EB1 /* NetWorkViewController.h */,
-				EA26776F1F46DDE6002A9EB1 /* NetWorkViewController.m */,
 				EA2AC0111F458A2E004CAF71 /* Main.storyboard */,
 				EA2AC0141F458A2E004CAF71 /* Assets.xcassets */,
 				EA2AC0161F458A2E004CAF71 /* LaunchScreen.storyboard */,
 				EA2AC0191F458A2E004CAF71 /* Info.plist */,
 				EA2AC0081F458A2E004CAF71 /* Supporting Files */,
-				EA7692401F4AE57B00F53247 /* testViewController.h */,
-				EA7692411F4AE57B00F53247 /* testViewController.m */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -214,15 +204,15 @@
 			name = Delegate;
 			sourceTree = "<group>";
 		};
-		EA7692431F4AFB8800F53247 /* New Group */ = {
+		EA7692431F4AFB8800F53247 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				EA7692441F4AFB9D00F53247 /* TETViewController.h */,
-				EA7692451F4AFB9D00F53247 /* TETViewController.m */,
-				EA7692471F4AFC1D00F53247 /* FileDownloadInfo.h */,
-				EA7692481F4AFC1D00F53247 /* FileDownloadInfo.m */,
+				EA7692401F4AE57B00F53247 /* testViewController.h */,
+				EA7692411F4AE57B00F53247 /* testViewController.m */,
+				EA26776E1F46DDE6002A9EB1 /* NetWorkViewController.h */,
+				EA26776F1F46DDE6002A9EB1 /* NetWorkViewController.m */,
 			);
-			name = "New Group";
+			name = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,8 +412,6 @@
 				EA2AC00A1F458A2E004CAF71 /* main.m in Sources */,
 				EA26776A1F46CE27002A9EB1 /* DownloaderObject.m in Sources */,
 				EA7692421F4AE57B00F53247 /* testViewController.m in Sources */,
-				EA7692491F4AFC1D00F53247 /* FileDownloadInfo.m in Sources */,
-				EA7692461F4AFB9D00F53247 /* TETViewController.m in Sources */,
 				EA26776D1F46D03A002A9EB1 /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

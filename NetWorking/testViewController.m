@@ -84,23 +84,23 @@
 }
 - (IBAction)stop1:(id)sender {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:_links[0]];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:_links[0]];
 }
 - (IBAction)stop2:(id)sender {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:_links[1]];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:_links[1]];
 }
 - (IBAction)stop3:(id)sender {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:_links[2]];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:_links[2]];
 }
 - (IBAction)stop4:(id)sender {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:_links[3]];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:_links[3]];
 }
 - (IBAction)stop5:(id)sender {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:_links[4]];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:_links[4]];
 }
 
 - (IBAction)cancel1:(id)sender {
@@ -156,14 +156,14 @@
     } completionBlock:^(BOOL completed) {
         
         NSLog(@"Download completed!");
-    } enableBackgroundMode:YES];
+    }];
 }
 
 #pragma mark - stopDownload
 
 - (void)stopDownload:(NSString *)link {
     
-    [[DownloadManager sharedManager] stopDownLoadForUrl:link];
+    [[DownloadManager sharedManager] pauseDownLoadForUrl:link];
 }
 
 @end
